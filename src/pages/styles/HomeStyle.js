@@ -1,27 +1,32 @@
 import styled from "styled-components";
 
-const Main = styled.main`
-  background-color: #2F332E;
-  width: 100%;
-  height: 100vh;
-  color: #ddd;
-  font-family: "Roboto", sans-serif;
-`;
-
 export const Section = styled.section`
   text-align: center;
   margin: 50px 0 50px 0;
 `;
 
+export const SectionAll = styled.section`
+  display: flex;
+  justify-content: space-around;
+`;
+
 export const ContainerThings1 = styled.div`
-  display: inline-block;
+  display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 28%;
 `;
 
 export const Article = styled.article`
-  width: 30%;
-  height: 40%;
+  height: 50%;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+`;
+
+export const TecArticle = styled.article`
+  height: 30%;
   margin-left: 100px;
   margin-bottom: 30px;
   padding: 20px;
@@ -57,5 +62,3 @@ export const Img = styled.img`
   width: 70px;
   height: 70px;
 `;
-
-export default Main;
