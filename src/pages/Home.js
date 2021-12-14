@@ -5,12 +5,14 @@ import {
   Section,
   SectionAll,
   ContainerThings1,
+  ContainerThings2,
   Article,
   TecArticle,
   Title,
   Paragraph,
   ContainerImg,
   Img,
+  ImgProfile,
 } from './styles/HomeStyle';
 import SpiderMan from '../img/spiderman.png';
 import IconHtml from '../img/html5.png';
@@ -92,11 +94,11 @@ function Home() {
             </ContainerImg>
           </TecArticle>
         </ContainerThings1>
-        <div>
+        <ContainerThings2>
           <article>
-            <img src={SpiderMan} alt='Minha foto' />
+            <ImgProfile src={SpiderMan} alt='Minha foto' />
           </article>
-        </div>
+        </ContainerThings2>
       </SectionAll>
     </main>
   );
