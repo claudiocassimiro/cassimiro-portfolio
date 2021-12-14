@@ -14,6 +14,18 @@ export const ContainerThings1 = styled.div`
   display: flex;
   flex-direction: column;
   width: 28%;
+  @media(max-width: 1400px) {
+    width: 50%;
+  }
+`;
+
+export const ContainerThings2 = styled.div`
+  width: 30%;
+  @media(max-width: 1400px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Article = styled.article`
@@ -23,6 +35,9 @@ export const Article = styled.article`
   padding: 20px;
   background-color: #eee;
   border-radius: 10px;
+  @media(max-width: 1400px) {
+    height: 60%;
+  }
 `;
 
 export const TecArticle = styled.article`
@@ -61,4 +76,11 @@ export const ContainerImg = styled.div`
 export const Img = styled.img`
   width: 70px;
   height: 70px;
+`;
+
+export const ImgProfile = styled.img`
+  @media(max-width: 1400px) {
+    width: 400px;
+    height: 400px;
+  }
 `;
