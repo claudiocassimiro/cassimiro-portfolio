@@ -32,15 +32,10 @@ export const ListItem = styled.li`
   cursor: pointer;
   padding: 48px 0 48px 0;
   font-size: 18px;
-  &&:hover {
+  &:hover {
     border-bottom: 2px solid #fff;
     height: 18px;
   }
-`;
-
-export const Link = styled.a`
-  text-decoration: none;
-  color: #222;
 `;
 
 export default HeaderStyle;
