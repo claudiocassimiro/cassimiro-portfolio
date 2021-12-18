@@ -10,13 +10,25 @@ export const SectionCards = styled.section`
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  width: 50%;
-  height: 700px;
+  width: 55%;
+  height: 75vh;
   margin: 0 auto;
+  @media (max-width: 2300px) {
+    height: 30vh;
+    width: 850px;
+  }
+  @media (max-width: 1600px) {
+    height: 100vh;
+    align-items: space-around;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export const Cards = styled.article`
   display: flex;
+  margin: 8px;
   flex-flow: column;
   justify-content: space-evenly;
   align-items: center;
