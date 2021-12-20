@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import { SectionTitle, SectionCards, Cards, Img, ProjectTitle, Button } from "./styles/Projects";
+import { SectionTitle, SectionCards, Cards, Img, ProjectTitle, Button } from "./styles/ProjectsStyle";
 import Construcao from "../img/construcao.png";
 
 function Projects() {
