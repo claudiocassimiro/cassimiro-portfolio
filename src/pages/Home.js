@@ -3,6 +3,10 @@ import AppContext from '../context/AppContext';
 import Header from '../components/Header';
 import {
   Section,
+  PhraseSection,
+  Phrase,
+  Author,
+  Greeting,
   SectionAll,
   ContainerThings1,
   ContainerThings2,
@@ -24,7 +28,7 @@ import IconRtl from '../img/rtl.png';
 
 function Home() {
 
-  const { name } = useContext(AppContext);
+  const { name, phrase, author } = useContext(AppContext);
   const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
@@ -54,9 +58,13 @@ function Home() {
     <main>
       <Header />
       <Section>
-        <h1>{`Olá ${name}, ${greeting} =D`}</h1>  
+        <Greeting>{`Olá ${name}, ${greeting}`}</Greeting>
       </Section>
-      <SectionAll>
+      <PhraseSection>
+        <Phrase>{ phrase }</Phrase>
+        <Author>{ `- ${author}.` }</Author>
+      </PhraseSection>
+      {/* <SectionAll>
         <ContainerThings1>
           <Article>
             <Title>Meu nome é Cláudio, e...</Title>
@@ -99,7 +107,7 @@ function Home() {
             <ImgProfile src={SpiderMan} alt='Minha foto' />
           </article>
         </ContainerThings2>
-      </SectionAll>
+      </SectionAll> */}
     </main>
   );
 }
