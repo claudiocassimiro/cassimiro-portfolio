@@ -85,14 +85,14 @@ export const Article = styled.article`
 `;
 
 export const TecArticle = styled.article`
+  height: 100%;
   margin-left: 100px;
   margin-bottom: 30px;
   padding: 20px;
-  background-color: #eee;
   border-radius: 10px;
+  background-color: #eee;
   @media(min-width: 374px) and (max-width: 1023px) {
     margin-left: 0;
-    height: 450px;
   }
 `;
 
@@ -111,8 +111,7 @@ export const Paragraph = styled.p`
 `;
 
 export const ContainerImg = styled.div`
-  width: 50%;
-  height: 200px;
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -123,4 +122,5 @@ export const ContainerImg = styled.div`
 export const Img = styled.img`
   width: 70px;
   height: 70px;
+  margin: 10px;
 `;
