@@ -1,8 +1,48 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 25px 0 40px -20px;
+`;
+
+export const Greeting = styled.h1`
+  background-color: #4397D5;
+  border-radius: 8px;
+  padding: 10px;
+  color: #222;
+
+`;
+
+export const PhraseSection = styled.section`
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 800px;
+  margin 0 auto;
+  margin-bottom: 50px;
   text-align: center;
-  margin: 50px 0 50px 0;
+  @media (min-width: 400px) {
+    width: 400px;
+  }
+  @media (min-width: 1024px) {
+    width: 600px;
+  }
+  @media (min-width: 1440px) {
+    width: 800px;
+  }
+`;
+
+export const Phrase = styled.h3`
+  font-size: 1.5rem;
+`;
+
+export const Author = styled.p`
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-top: 8px;
+  align-self: flex-end;
 `;
 
 export const SectionAll = styled.section`
