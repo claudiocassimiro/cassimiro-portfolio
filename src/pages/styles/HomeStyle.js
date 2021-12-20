@@ -92,6 +92,7 @@ export const TecArticle = styled.article`
   border-radius: 10px;
   @media(min-width: 374px) and (max-width: 1023px) {
     margin-left: 0;
+    height: 450px;
   }
 `;
 
