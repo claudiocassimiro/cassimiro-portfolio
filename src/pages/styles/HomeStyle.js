@@ -21,6 +21,7 @@ export const PhraseSection = styled.section`
   align-items: center;
   width: 800px;
   margin 0 auto;
+  margin-top: 100px;
   margin-bottom: 50px;
   text-align: center;
   @media (min-width: 400px) {
@@ -47,30 +48,33 @@ export const Author = styled.p`
 
 export const SectionAll = styled.section`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin: 150px 80px 0 80px;
+  @media(min-width: 374px) and (max-width: 1023px) {
+    flex-direction: column;
+    margin: 100px 40px 0 40px;
+  }
 `;
 
 export const ContainerThings1 = styled.div`
   display: flex;
   flex-direction: column;
-  width: 28%;
-  @media(max-width: 1400px) {
-    width: 50%;
+  width: 600px;
+  height: 100%;
+  @media(min-width: 374px) and (max-width: 1023px) {
+    width: 100%;
   }
 `;
 
 export const ContainerThings2 = styled.div`
-  width: 30%;
-  @media(max-width: 1400px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 600px;
+  height: 100%;
+  @media(min-width: 374px) and (max-width: 1023px) {
+    width: 100%;
   }
 `;
 
 export const Article = styled.article`
-  height: 50%;
-  margin-left: 100px;
   margin-bottom: 30px;
   padding: 20px;
   background-color: #eee;
@@ -81,12 +85,14 @@ export const Article = styled.article`
 `;
 
 export const TecArticle = styled.article`
-  height: 30%;
   margin-left: 100px;
   margin-bottom: 30px;
   padding: 20px;
   background-color: #eee;
   border-radius: 10px;
+  @media(min-width: 374px) and (max-width: 1023px) {
+    margin-left: 0;
+  }
 `;
 
 export const Title = styled.h2`
@@ -116,11 +122,4 @@ export const ContainerImg = styled.div`
 export const Img = styled.img`
   width: 70px;
   height: 70px;
-`;
-
-export const ImgProfile = styled.img`
-  @media(max-width: 1400px) {
-    width: 400px;
-    height: 400px;
-  }
 `;
