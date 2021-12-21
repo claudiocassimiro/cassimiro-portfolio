@@ -12,7 +12,6 @@ export const Greeting = styled.h1`
   border-radius: 8px;
   padding: 10px;
   color: #222;
-
 `;
 
 export const PhraseSection = styled.section`
@@ -26,6 +25,7 @@ export const PhraseSection = styled.section`
   text-align: center;
   @media (min-width: 400px) {
     width: 400px;
+    margin-top: 70px;
   }
   @media (min-width: 1024px) {
     width: 600px;
