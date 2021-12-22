@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
-  "homepage": "cassimiro-portfolio/",
+  "homepage": "cassimiro-portfolio/src/App.js/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.0",
