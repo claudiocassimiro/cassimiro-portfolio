@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from 'react';
 import AppContext from '../context/AppContext';
 import Header from '../components/Header';
 import {
+  Main,
   Section,
   PhraseSection,
   Phrase,
@@ -56,14 +57,14 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <Main>
       <Header />
       <Section>
         <Greeting>{`Olá ${name}, ${greeting}`}</Greeting>
       </Section>
       <PhraseSection>
         <Phrase>{ phrase }</Phrase>
-        <Author>{ `- ${author}.` }</Author>
+        <Author>{ ` ${author}.` }</Author>
       </PhraseSection>
       <SectionAll>
         <ContainerThings1>
@@ -109,7 +110,7 @@ function Home() {
           </TecArticle>
         </ContainerThings2>
       </SectionAll>
-    </main>
+    </Main>
   );
 }
 
