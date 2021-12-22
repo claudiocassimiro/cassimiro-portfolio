@@ -4,6 +4,7 @@ import ProvideContext from "./context/ProvideContext";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" component={Home} />
         <Route path="/projects" component={Projects} />
         <Route path="/aboutme" component={AboutMe} />
+        <Route path="/contacts" component={Contact} />
       </Switch>
     </ProvideContext>
   );
