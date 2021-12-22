@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Main = styled.main`
+  overflow: hidden;
+`;
+
 export const Section = styled.section`
   display: flex;
   justify-content: flex-end;
@@ -16,26 +20,21 @@ export const Greeting = styled.h1`
 
 export const PhraseSection = styled.section`
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 800px;
-  margin 0 auto;
+  width: 100%;
   margin-top: 100px;
   margin-bottom: 50px;
-  text-align: center;
-  @media (min-width: 400px) {
-    width: 400px;
+  margin: 0 auto;
+  @media (max-width: 400px) {
     margin-top: 70px;
-  }
-  @media (min-width: 1024px) {
-    width: 600px;
-  }
-  @media (min-width: 1440px) {
-    width: 800px;
   }
 `;
 
 export const Phrase = styled.h3`
+  width: 80%;
+  text-align: center;
   font-size: 1.5rem;
 `;
 
@@ -43,16 +42,19 @@ export const Author = styled.p`
   font-size: 1.2rem;
   color: #bbb;
   margin-top: 8px;
-  align-self: flex-end;
+  align-self: center;
 `;
 
 export const SectionAll = styled.section`
   display: flex;
   justify-content: space-evenly;
   margin: 150px 80px 0 80px;
-  @media(min-width: 374px) and (max-width: 1023px) {
+  @media(min-width: 280px) and (max-width: 1024px) {
     flex-direction: column;
-    margin: 100px 40px 0 40px;
+    margin: 50px 40px 0 40px;
+  }
+  @media(max-width: 1024px) {
+    margin: 70px 40px 0 40px;
   }
 `;
 
@@ -61,7 +63,7 @@ export const ContainerThings1 = styled.div`
   flex-direction: column;
   width: 600px;
   height: 100%;
-  @media(min-width: 374px) and (max-width: 1023px) {
+  @media(min-width: 280px) and (max-width: 1024px) {
     width: 100%;
   }
 `;
@@ -69,7 +71,7 @@ export const ContainerThings1 = styled.div`
 export const ContainerThings2 = styled.div`
   width: 600px;
   height: 100%;
-  @media(min-width: 374px) and (max-width: 1023px) {
+  @media(min-width: 280px) and (max-width: 1024px) {
     width: 100%;
   }
 `;
@@ -91,7 +93,7 @@ export const TecArticle = styled.article`
   padding: 20px;
   border-radius: 10px;
   background-color: #eee;
-  @media(min-width: 374px) and (max-width: 1023px) {
+  @media(min-width: 280px) and (max-width: 1024px) {
     margin-left: 0;
   }
 `;
