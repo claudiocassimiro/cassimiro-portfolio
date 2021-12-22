@@ -8,6 +8,7 @@ const Main = styled.main`
   width: 100%;
   height: 100vh;
   align-items: center;
+  overflow: hidden;
 `;
 
 export const SectionLogin = styled.section`
@@ -17,6 +18,10 @@ export const SectionLogin = styled.section`
   box-shadow: 6px 3px 16px 0px rgba(0,0,0,0.51);
   margin: 0 auto;
   text-align: center;
+  @media (max-width: 500px) {
+    display: flex;
+    width: 90%;
+  }
 `;
 
 export const Form = styled.form`
