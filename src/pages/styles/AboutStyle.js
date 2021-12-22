@@ -17,6 +17,9 @@ export const Img = styled.img`
   @media (max-width: 768px) {
     width: 230px;
   }
+  @media (max-width: 400px) {
+    width: 150px;
+  }
 `;
 
 export const Link = styled.a`
