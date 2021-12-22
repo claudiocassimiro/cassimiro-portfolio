@@ -5,9 +5,12 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 100px;
+  @media (min-width: 280px) {
+    width: 90%;
+  }
 `;
 
 export const TextArticle = styled.article`
