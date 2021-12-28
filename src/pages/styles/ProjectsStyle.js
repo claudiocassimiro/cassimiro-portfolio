@@ -38,6 +38,14 @@ export const Cards = styled.article`
   text-align: center;
 `;
 
+export const Links = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  height: 40px;
+`;
+
 export const ProjectTitle = styled.h2`
 `;
 
@@ -48,7 +56,7 @@ export const Img = styled.img`
 
 export const Button = styled.button`
   width: 100px;
-  height: 30px;
+  height: 35px;
   border-radius: 3px;
   outline: none;
   border: none;
