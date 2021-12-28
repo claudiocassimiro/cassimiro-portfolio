@@ -1,6 +1,7 @@
 import Header from "../components/Header";
-import { SectionTitle, SectionCards, Cards, Img, ProjectTitle, Button } from "./styles/ProjectsStyle";
+import { SectionTitle, SectionCards, Cards, Img, ProjectTitle, Button, Links } from "./styles/ProjectsStyle";
 import Construcao from "../img/construcao.png";
+import TriviaGame from "../img/triviagame.png";
 
 function Projects() {
   return (
@@ -11,34 +12,124 @@ function Projects() {
       </SectionTitle>
       <SectionCards>
         <Cards>
-          <ProjectTitle>Projeto-1</ProjectTitle>
-          <Img src={Construcao} alt="projeto 1" />
-          <Button>Ir para projeto</Button>
+          <ProjectTitle>Trivia Game</ProjectTitle>
+          <img src={TriviaGame} alt="trivia game" />
+          <Links>
+            <a 
+              href="https://trivia-gaming.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Jogar Trivia</Button>
+            </a>
+            <a 
+              href="https://github.com/claudiocassimiro/Trivia-Game-Project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Ir para repositório</Button>
+            </a>
+          </Links>
         </Cards>
         <Cards>
           <ProjectTitle>Projeto-2</ProjectTitle>
           <Img src={Construcao} alt="projeto 2" />
-          <Button>Ir para projeto</Button>
+          <Links>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Projeto-2</Button>
+            </a>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Ir para repositório</Button>
+            </a>
+          </Links>
         </Cards>
         <Cards>
           <ProjectTitle>Projeto-3</ProjectTitle>
           <Img src={Construcao} alt="projeto 3" />
-          <Button>Ir para projeto</Button>
+          <Links>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Projeto-3</Button>
+            </a>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Ir para repositório</Button>
+            </a>
+          </Links>
         </Cards>
         <Cards>
           <ProjectTitle>Projeto-4</ProjectTitle>
           <Img src={Construcao} alt="projeto 4" />
-          <Button>Ir para projeto</Button>
+          <Links>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Projeto-4</Button>
+            </a>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Ir para repositório</Button>
+            </a>
+          </Links>
         </Cards>
         <Cards>
           <ProjectTitle>Projeto-5</ProjectTitle>
           <Img src={Construcao} alt="projeto 5" />
-          <Button>Ir para projeto</Button>
+          <Links>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Projeto-5</Button>
+            </a>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Ir para repositório</Button>
+            </a>
+          </Links>
         </Cards>
         <Cards>
           <ProjectTitle>Projeto-6</ProjectTitle>
           <Img src={Construcao} alt="projeto 6" />
-          <Button>Ir para projeto</Button>
+          <Links>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Projeto-6</Button>
+            </a>
+            <a 
+              href="a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Ir para repositório</Button>
+            </a>
+          </Links>
         </Cards>
       </SectionCards>
     </main>
