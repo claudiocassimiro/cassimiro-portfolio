@@ -4,34 +4,37 @@ import Header from '../components/Header';
 import {
   Main,
   Section,
-  PhraseSection,
-  Phrase,
-  Author,
-  Greeting,
-  SectionAll,
-  ContainerThings1,
-  ContainerThings2,
-  Article,
-  TecArticle,
-  Title,
-  Paragraph,
+  H1Name,
+  H2Ocupation,
   ContainerImg,
-  Img,
+  ControlsButton,
+  Article,
 } from './styles/HomeStyle';
 import IconHtml from '../img/html5.png';
 import IconCss from '../img/css3.png';
 import IconGit from '../img/git.png';
 import IconJS from '../img/JS.png';
 import IconReact from '../img/react.png';
-import IconRtl from '../img/rtl.png';
 import IconBootstrap from '../img/bootstrap5.png';
 import IconStyled from '../img/styled.png';
-import IconRedux from '../img/redux.png';
+import IconDocker from '../img/docker.png';
+
+const imageArray = [
+  IconHtml,
+  IconCss,
+  IconGit,
+  IconJS,
+  IconReact,
+  IconBootstrap,
+  IconStyled,
+  IconDocker,
+];
 
 function Home() {
 
   const { name, phrase, author } = useContext(AppContext);
   const [greeting, setGreeting] = useState('');
+  const [indexButton, setIndexButton] = useState(0);
 
   useEffect(() => {
     function getHour() {
@@ -56,60 +59,61 @@ function Home() {
     getHour();
   }, []);
 
+  function handleButtonImage(action) {
+    const limit = 6;
+    if (action === 'prev') {
+      if (indexButton === 0) {
+        setIndexButton(limit);
+      } else {
+        setIndexButton(indexButton - 2);
+      }
+    }
+    if (action === 'next') {
+      if (indexButton === limit) {
+        setIndexButton(0);
+      } else {
+        setIndexButton(indexButton + 2);
+      }
+    }
+  }
+
   return (
     <Main>
       <Header />
       <Section>
-        <Greeting>{`Olá ${name}, ${greeting}`}</Greeting>
+        <Article>
+          <H1Name>CLÁUDIO CASSIMIRO</H1Name>
+          <H2Ocupation>DESENVOLVEDOR DE SOFTWARE</H2Ocupation>
+        </Article>
+        <ContainerImg>
+          <ControlsButton
+            type="button"
+            onClick={() => {
+              handleButtonImage('prev');
+            }}
+          >
+            {'<'}
+          </ControlsButton>
+          {imageArray.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={image}
+              hidden={
+                !(index === indexButton || index === indexButton + 1)
+              }
+            />          
+          ))}
+          <ControlsButton
+            type="button"
+            onClick={() => {
+              handleButtonImage('next');
+            }}
+          >
+            {'>'}
+          </ControlsButton>
+        </ContainerImg>
       </Section>
-      <PhraseSection>
-        <Phrase>{ phrase }</Phrase>
-        <Author>{ ` ${author}.` }</Author>
-      </PhraseSection>
-      <SectionAll>
-        <ContainerThings1>
-          <Article>
-              <Title>Meu nome é Cláudio, e...</Title>
-              <Paragraph>Lorem Ipsum is simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown 
-                printer took a galley of type and scrambled it to make a 
-                type specimen book. It has survived not only five centuries, 
-                but also the leap into electronic typesetting, remaining 
-                essentially unchanged. It was popularised in the 1960s with 
-                the release of Letraset sheets containing Lorem Ipsum passages, 
-                and more recently with desktop publishing software like Aldus 
-                PageMaker including versions of Lorem Ipsum.
-                Lorem Ipsum is simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown 
-                printer took a galley of type and scrambled it to make a 
-                type specimen book. It has survived not only five centuries, 
-                but also the leap into electronic typesetting, remaining 
-                essentially unchanged. It was popularised in the 1960s with 
-                the release of Letraset sheets containing Lorem Ipsum passages, 
-                and more recently with desktop publishing software like Aldus 
-                PageMaker including versions of Lorem Ipsum.
-              </Paragraph>
-            </Article>
-        </ContainerThings1>
-        <ContainerThings2>
-          <TecArticle>
-            <Title>Tecnologias:</Title>
-            <ContainerImg>
-              <Img src={IconHtml} alt='html icone'/>
-              <Img src={IconCss} alt='css icone'/>
-              <Img src={IconGit} alt='git icone'/>
-              <Img src={IconJS} alt='js icone'/>
-              <Img src={IconReact} alt='react icone'/>
-              <Img src={IconRtl} alt='rtl icone'/>
-              <Img src={IconBootstrap} alt='bootstrap icone'/>
-              <Img src={IconStyled} alt='styled component icone'/>
-              <Img src={IconRedux} alt='redux icone'/>
-            </ContainerImg>
-          </TecArticle>
-        </ContainerThings2>
-      </SectionAll>
     </Main>
   );
 }
